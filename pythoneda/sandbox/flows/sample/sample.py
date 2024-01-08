@@ -1,7 +1,7 @@
 """
-pythoneda/sandbox/flows/sample/__init__.py
+pythoneda/sandbox/flows/sample/sample.py
 
-This file ensures pythoneda.sandbox.flows.sample is a namespace.
+This file declares the Sample class.
 
 Copyright (C) 2024-today rydnr's pythoneda-sandbox/flow-sample
 
@@ -18,6 +18,24 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-__path__ = __import__("pkgutil").extend_path(__path__, __name__)
+from pythoneda import Flow
 
-from .sample import Sample
+
+class Sample(Flow):
+    """
+    A sample flow.
+
+    Class name: Sample
+
+    Responsibilities:
+        - Show a simple flow.
+
+    Collaborators:
+        - None
+    """
+
+    def __init__(self):
+        """
+        Creates a new Sample instance.
+        """
+        super().__init__()
