@@ -1,7 +1,7 @@
 """
-pythoneda/sandbox/flows/sample/sample.py
+pythoneda/sandbox/flows/sample/events/event1.py
 
-This file declares the Sample class.
+This file declares the Event1 class.
 
 Copyright (C) 2024-today rydnr's pythoneda-sandbox/flow-sample
 
@@ -18,18 +18,17 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-from pythoneda import Flow
-from pythoneda.sandbox.flows.sample.events import Event1
+from pythoneda import Event
 
 
-class Sample(Flow):
+class Event1(Event):
     """
-    A sample flow.
+    A meaningless event.
 
-    Class name: Sample
+    Class name: Event1
 
     Responsibilities:
-        - Show a simple flow.
+        - Be used in tests.
 
     Collaborators:
         - None
@@ -37,16 +36,6 @@ class Sample(Flow):
 
     def __init__(self):
         """
-        Creates a new Sample instance.
+        Creates a new Event1 instance.
         """
         super().__init__()
-
-    @classmethod
-    def event1(cls, event: Event1):
-        """
-        Receives the event1.
-        :param event: The event.
-        :type event: pythoneda.sandbox.flows.sample.events.Event1
-        :return: A new flow.
-        :rtype: pythoneda.sandbox.flows.sample.Sample
-        """
