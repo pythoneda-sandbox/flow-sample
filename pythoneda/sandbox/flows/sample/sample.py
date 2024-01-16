@@ -1,3 +1,4 @@
+# vim: set fileencoding=utf-8
 """
 pythoneda/sandbox/flows/sample/sample.py
 
@@ -18,8 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-from pythoneda import Flow
 from pythoneda.sandbox.flows.sample.events import Event1
+from pythoneda.shared import Flow
 
 
 class Sample(Flow):
@@ -35,11 +36,11 @@ class Sample(Flow):
         - None
     """
 
-    def __init__(self):
+    def __init__(self, firstEvent: Event1):
         """
         Creates a new Sample instance.
         """
-        super().__init__()
+        super().__init__(firstEvent)
 
     @classmethod
     def event1(cls, event: Event1):
@@ -50,3 +51,4 @@ class Sample(Flow):
         :return: A new flow.
         :rtype: pythoneda.sandbox.flows.sample.Sample
         """
+        return Sample(event)

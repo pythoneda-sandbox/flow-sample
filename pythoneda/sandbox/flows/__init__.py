@@ -1,3 +1,4 @@
+# vim: set fileencoding=utf-8
 """
 pythoneda/sandbox/flows/__init__.py
 
