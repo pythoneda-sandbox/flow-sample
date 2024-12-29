@@ -20,6 +20,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 from pythoneda.shared import Event
+from typing import List
 
 
 class Event1(Event):
@@ -35,11 +36,17 @@ class Event1(Event):
         - None
     """
 
-    def __init__(self):
+    def __init__(self, previousEventIds: List[str] = None, reconstructedId: str = None):
         """
         Creates a new Event1 instance.
+        :param previousEventIds: The id of the previous events.
+        :type previousEventIds: List[str]
+        :param reconstructedId: The id of the event, if it's being reconstructed.
+        :type reconstructedId: str
         """
-        super().__init__()
+        super().__init__(previousEventIds, reconstructedId)
+
+
 # vim: syntax=python ts=4 sw=4 sts=4 tw=79 sr et
 # Local Variables:
 # mode: python
